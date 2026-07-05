@@ -556,7 +556,7 @@ class LogAnalyzerApp(customtkinter.CTk):
         except Exception as e:
             country_map, country_counts, error = {}, Counter(), str(e)
         self.after(0, lambda: self._on_countries_resolved(country_map, country_counts, error))
-        """I wish ipwhois worked for shit"""
+        """I wish ipwhois worked"""
     def _resolve_countries(self, ip_counts: dict):
         """ each unique IP to a country via ip-api.com's free batch endpoint"""
         country_map = {}
